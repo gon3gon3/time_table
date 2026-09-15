@@ -18,13 +18,13 @@
     <label>開始時間: <input type="time" id="startTime"></label>
     <label>終了時間: <input type="time" id="endTime"></label>
     <br>
-   <small>(どちらか一方のみ入力してください)</small> 
+    <small>(どちらか一方のみ入力してください)</small> 
     <br>
     <label>区間数: <input type="number" id="count" value="10" min="1"></label>
   </div>
   <button onclick="generateTable()">表を作成</button>
   <div id="tableContainer"></div>
-  
+
   <script>
     function formatTime(minutes) {
       let hours = Math.floor(minutes / 60) % 24;
@@ -70,9 +70,7 @@
       tableHTML += '</table>';
       document.getElementById('tableContainer').innerHTML = tableHTML;
     }
-  </script>
 
-  <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
@@ -84,6 +82,6 @@
           });
       });
     }
-  </script> 
+  </script>
 </body>
 </html>
