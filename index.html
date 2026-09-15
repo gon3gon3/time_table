@@ -11,15 +11,6 @@
     table { margin: auto; border-collapse: collapse; }
     th, td { border: 1px solid #ccc; padding: 5px 10px; text-align: center; }
   </style>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
-        console.log('Service Worker 登録成功:', registration);
-      }).catch(function(error) {
-        console.log('Service Worker 登録失敗:', error);
-      });
-    }
-  </script>
 </head>
 <body>
   <h2>スタンプ時間</h2>
@@ -79,8 +70,9 @@
       tableHTML += '</table>';
       document.getElementById('tableContainer').innerHTML = tableHTML;
     }
-  </script
-   <script>
+  </script>
+
+  <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js')
